@@ -1,1 +1,239 @@
-Hello World
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Dr Andrew Gibbs - UCL</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script type="text/javascript" async
+  		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML">
+		</script>
+		<!-- mathjax -->
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({
+			  tex2jax: {
+				inlineMath: [['$', '$'], ['\\(', '\\)']],
+				displayMath: [['$$', '$$'], ['\\[', '\\]']],
+				processEscapes: true,
+				processEnvironments: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+				TeX: { equationNumbers: { autoNumber: "AMS" } }
+			  },
+			  showProcessingMessages: false,
+			  messageStyle: "none"
+			});
+		  </script>	
+		  <!-- bibtex	   -->
+		  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bibtex-js/1.0.2/bibtex.min.js"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<span class="image avatar"><img src="images/face.jpg" alt="" /></span>
+					<h1 id="logo"><a href="#">Dr Andrew Gibbs</a></h1>
+					<p>Applied Mathematician<br />
+					at University College London</p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="#secaboutme" class="active">About me</a></li>
+						<li><a href="#secsoftware">Software</a></li>
+						<li><a href="#secpubs">Publications</a></li>
+						<li><a href="#secphd">Theses</a></li>
+						<li><a href="#sechertz">Hertz</a></li>
+
+					</ul>
+				</nav>
+				<footer>
+					<ul class="icons">
+						<li><a href="https://github.com/AndrewGibbs" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="mailto:andrew.gibbs@ucl.ac.uk" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="https://www.linkedin.com/in/andrew-gibbs-7965022b8/" class="fab fa-linkedin-in"><span class="label"></span></a></li>
+					</ul>
+				</footer>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+								<div class="image main" data-position="center">
+									<img src="images/UCLogo.png" alt="" style="width: 100%; height: auto;" />
+								</div>
+								<section id="secaboutme">
+								<div class="container">
+									<header class="major">
+										<h2>Andrew Gibbs</h2>
+										<p>About me</p>
+										<p>I am an applied mathematician working at University College London. Broadly speaking, my research focuses on the design, analysis and implementation of numerical models for acoustic and electro-magnetic wave propagation. These methods draw largely from approximation theory, complex analysis, asymptotic methods and functional analysis.</p>
+										<p> I am currently a named Co-Investigator on the project <a href="https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/V053868/1" target="_blank"> EP/V053868/1: Singular and Oscillatory Quadrature on Non-Smooth Domains</a>, with <a href="https://www.ucl.ac.uk/~ucahdhe/" target="_blank">Prof David Hewett</a>.
+										<p> In September 2023 I won the <a href="https://acoustics.ac.uk/ukan-math-acoust-paper-prize/" target="_blank">UKAN+ Mathematical Acoustics paper prize.</a></p>
+										<p><a>I am an early career rep for the <a href="https://acoustics.ac.uk/sigs/computational-acoustics/" target="_blank">Computational Acoustics Special Interest Group</a>  of the UK Acoustics Network (UKAN+). I currently maintain the <a href="https://knowledgebase.acoustics.ac.uk/intro.html" target="_blank">knowledgebase</a>, which was originally built by <a href="https://www.york.ac.uk/language/people/academic-research/amelia-gully/" target="_blank">Amelia Gully</a>.</a></p>
+									</header>
+								</div>
+							</section>
+
+
+						
+						<!-- Three -->
+							<section id="secsoftware">
+								<div class="container">
+									<h3>Mathematical Software</h3>
+									<div id="publications"></div>
+									
+									<div class="features">
+										<article>
+											<a href="https://github.com/AndrewGibbs/PathFinder" target="_blank" class="image"><img src="images/PF_image.png" alt="" /></a>
+											<div class="inner">
+												<h4><a href="https://github.com/AndrewGibbs/PathFinder" target="_blank">PathFinder</a></h4>
+												<p>
+													Matlab/Octave package for efficient evaluation of oscillatory integrals in the class
+													\[
+													\int_{a}^bf(x)\exp(\mathrm{i}\omega g(x)) \mathrm{d} x
+													\]
+													where $g$ is a polynomial, $\omega>0$ and $f$ is entire. The endpoints $a,b$ can be complex, even infinite.
+												</p>
+											</div>
+										</article>
+										<article>
+											<a href="https://github.com/AndrewGibbs/IFSintegrals" target="_blank" class="image"><img src="images/KochSnowflake.jpg" alt="" /></a>
+											<div class="inner">
+												<h4><a href="https://github.com/AndrewGibbs/IFSintegrals" target="_blank">IFSintegrals</a></h4>
+												<p>Julia package for the approximation of integrals and integral equations posed on self-similar fractals $\Gamma$. The main requirement is that $\Gamma$ can be described by a set of affine contraction maps $s_m$, such that
+													\[
+													\Gamma = \bigcup_{m=1}^M s_m(\Gamma).
+													\]
+													Specifically, these maps are
+													\[
+													s_m(x) := A_m\rho_mx+\delta_m,
+													\]
+													where $A_m$ is a rotation/reflection matrix, $\delta_m$ is a translation and $\rho_m<1$ is a contraction.
+												</p>
+											</div>
+										</article>
+										<article>
+											
+											<a href="https://github.com/AndrewGibbs/HNABEMLAB" target="_blank" class="image">
+												<img src="images/HNA2.png" alt="" />
+												<p></p>
+												<img src="images/HNA.png" alt="" /></a>
+											<div class="inner">
+												<h4><a href="https://github.com/AndrewGibbs/HNABEMLAB" target="_blank">HNA BEM LAB</a></h4>
+												<p> Matlab package for solving the Helmholtz BVP
+													\begin{align}
+													(\Delta+\omega^2)u=0\quad\text{ in }\mathbb{R}^2\setminus\Omega\\
+													u=0\quad\text{on }\partial\Omega
+													\end{align}
+													where $\Omega$ is polygonal, or a (bounded) screen $\Omega\subset\mathbb{R}.$ The method requirs $O(1)$ DOFs for convex polygons or screens as $\omega\to\infty$, and has $O(1)$ computational cost for multiple aligned screens.
+												</p>
+											</div>
+										</article>
+									</div>
+								</div>
+							</section>
+
+							<!-- Two -->
+							<section id="secpubs">
+								<div class="container">
+									<h2>Research Papers</h2>
+
+									</ul><hr>
+									<a name="conference papers"></a><h1>Under review</h1><ul>
+
+									<ul>
+										<li><p>A. Gibbs and S. Langdon. <b>An efficient frequency-independent numerical method for computing the far-field pattern induced by polygonal obstacles. </b><a href="http://arxiv.org/abs/2310.17603" target="_blank">(arXiv preprint)</a></li>
+											
+										<li><p> A. M. Caetano, X. Claeys, S. N. Chandler-Wilde, A. Gibbs, D. P. Hewett, A. Moiola. <b>Integral equation methods for acoustic scattering by fractals.</b> <a href="https://arxiv.org/abs/2309.02184" target="_blank">(arXiv preprint)</a></li>
+
+											
+										<li><p> A. M. Caetano, S. N. Chandler-Wilde, A. Gibbs, D. P. Hewett, A. Moiola. <b>A Hausdorff-measure boundary element method for acoustic scattering by fractal screens.</b> <a href="https://arxiv.org/abs/2212.06594" target="_blank">(arxiv preprint)</a></li>
+
+										</ul><hr>
+										<a name="conference papers"></a><h1>Published</h1><ul>
+											
+										<li><p> A. Gibbs, D. P. Hewett, D. Huybrechs. <b>Numerical evaluation of oscillatory integrals via automated steepest descent contour deformation.</b> <a href="https://www.sciencedirect.com/science/article/pii/S0021999124000366/pdfft?md5=f86304d6eaa58530f9316f273896d3b0&pid=1-s2.0-S0021999124000366-main.pdf" target="_blank">J. Comput. Phys., 501, (2024)</a>, <a href="https://arxiv.org/abs/2307.07261" target="_blank"> arxiv preprint</a>.</li>
+											
+										<li><p> J. R. Ockendon, H. Ockendon, R. H. Tew, D. P. Hewett, A. Gibbs. <b>A caustic terminating at an inflection point.</b> <a href="https://www.sciencedirect.com/science/article/pii/S0165212523001439/pdfft?md5=2cd158a2337b76857429a1c0c07e904a&pid=1-s2.0-S0165212523001439-main.pdf" target="_blank">Wave Motion, 125, (2024)</a>, <a href="https://arxiv.org/abs/2310.13406" target="_blank">arxiv preprint</a>.</li>
+											
+										<li><p> A. Gibbs, D. P. Hewett, B. Major. <b>Numerical evaluation of singular integrals on non-disjoint self-similar fractal sets.</b> <a href="https://link.springer.com/content/pdf/10.1007/s11075-023-01705-8.pdf" target="_blank">Numer. Algorithms (2024)</a>, <a href="https://arxiv.org/abs/2303.13141" target="_blank">arxiv preprint</a>.</li>
+											
+										<li><p> A. Gibbs, D. P. Hewett, A. Moiola. <b>Numerical quadrature for singular integrals on fractals.</b> <a href="https://link.springer.com/article/10.1007/s11075-022-01378-9" target="_blank">Num. Alg. 1-54, (2022)</a>, <a href="https://arxiv.org/abs/2112.11793" target="_blank">arxiv preprint.</a></li>
+
+										<li><p>J. Bannister, A. Gibbs, D. P. Hewett. <b>Acoustic scattering by impedance screens/cracks with fractal boundary: well-posedness analysis and boundary element approximation.</b> <a href="https://www.worldscientific.com/doi/epdf/10.1142/S0218202522500075" target="_blank">Math. Mod. Meth. Appl. Sci. 32(2), (2022)</a>, <a href="https://arxiv.org/abs/2009.13236" target="_blank">arxiv preprint.</a></li>
+
+										<li><p>A. Gibbs, D. Hewett, D. Huybrechs, E. Parolin. <b>Fast hybrid numerical-asymptotic boundary element methods for high frequency screen and aperture problems based on least-squares collocation.</b> <a href="https://link.springer.com/article/10.1007/s42985-020-00013-3?wt_mc=Internal.Event.1.SEM.ArticleAuthorIncrementalIssue&utm_source=ArticleAuthorIncrementalIssue&utm_medium=email&utm_content=AA_en_06082018&ArticleAuthorIncrementalIssue_20200807#citeas" target="_blank">SN Partial Differ. Equ. Appl. 1(4):21, (2020)</a>, <a href="https://arxiv.org/abs/1912.09916" target="_blank">arxiv preprint.</a></li>
+
+										<li><p>A. Gibbs, S. Langdon, A. Moiola and S.N. Chandler-Wilde. <b>A high frequency boundary element method for scattering by a class of multiple obstacles.</b> <a href="https://doi.org/10.1093/imanum/draa025" target="_blank">IMA JNA 41(2), (2021)</a>, <a href="https://arxiv.org/abs/1903.04449" target="_blank">arxiv preprint.</a></li>
+
+										<li><p>A. Gibbs, S. Langdon, A. Moiola. <a href="https://arxiv.org/abs/1805.08988" target="_blank"><b>Numerically stable computation of embedding formulae for scattering by polygons (technical report).</b></a></li>
+
+										<li><p>S.N. Chandler-Wilde, E.A. Spence, A. Gibbs, V. P. Smyshlyaev. <b>High-frequency bounds for the Helmholtz equation under parabolic trapping and applications in numerical analysis.</b><a href="https://epubs.siam.org/doi/10.1137/18M1234916" target="_blank">SIAM J. Math. Anal., 52(1), (2020),</a>, <a href="https://arxiv.org/abs/1708.08415" target="_blank">arxiv preprint.</a></li>
+
+										</ul><hr>
+										<a name="conference papers"></a><h1>Refereed Conference Proceedings:</h1><ul>
+										
+										<li><p>
+											J. Bannister, A. Gibbs, D. P. Hewett, and V. Smyshlyaev. <b>Volume integral equations on fractal domains and the Koch snowflake transmission problem.</b> <a href="docs/Josh_abstract_waves_22.pdf" target="_blank">In 15th International Conference on Mathematical and Numerical Aspects of Wave Propagation, ENSTA Polytechnique Paris, (2022).</a>
+										</li>
+
+										<li><p>
+											A. M. Caetano, S. N. Chandler-Wilde, A. Gibbs, D. P. Hewett, and A. Moiola. <b>A Hausdorff-measure
+												boundary element method for scattering by fractal screens. I: Numerical analysis.</b> <a href="docs/AGibbs_waves_22.pdf" target="_blank">In 15th International Conference on Mathematical and Numerical Aspects of Wave Propagation, ENSTA Polytechnique Paris, (2022).</a>
+										</li>
+										</ul><hr>
+								</div>
+							</section>			
+							
+							<!-- Six -->
+							<section id="secphd">
+								<div class="container">
+									<h2>PhD</h2>
+									<p>My PhD was supervised by Simon Chandler-Wilde, Stephen Langdon and Andrea Moiola. The thesis is available <a href="http://centaur.reading.ac.uk/73458/1/16014423_Gibbs_thesis.pdf" target="_blank">here.</p></a>
+
+									<h2>MMath</h2>
+									<p>My MMath dissertation was supervised by Zuowei Wang. It is available <a href="docs/Molecular Dynamics simulation of self-healing polymers.pdf" target="_blank">here.</p></a>
+								</div>
+							</section>	
+							
+							<!-- Five -->
+							<section id="sechertz">
+								<div class="container">
+									<h2>Hertz</h2>
+									For information about Hertz, a SciArt collaboration with artist Juliet Robson and astrophysicist Bill Chaplin, please click <a href="https://julietrobson.com/about/">here.</a>
+								</div>
+							</section>	
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
